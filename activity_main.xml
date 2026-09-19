@@ -1,115 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    android:orientation="vertical"
     android:padding="20dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="AOD Smart Settings"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="30dp"/>
-
-    <!-- Master Service Card -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#121212"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:layout_marginBottom="15dp"
-        android:gravity="center_vertical">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Enable AOD Service"
+            android:text="AOD Pro Smart Settings"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"/>
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
 
-        <Switch
-            android:id="@+id/switchService"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-    <!-- Torch Shortcut Card -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#121212"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:layout_marginBottom="15dp"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:layout_width="0dp"
+        {/* Master Service Switch */}
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Torch Shortcut"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"/>
+            android:background="#121212"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Enable AOD Master Service"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"/>
+            <Switch
+                android:id="@+id/switchService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
 
-        <Switch
-            android:id="@+id/switchTorch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-    <!-- Audio Recorder Card -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#121212"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:layout_marginBottom="15dp"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:layout_width="0dp"
+        {/* Clock Style Selection (Samsung, Oppo, iOS) */}
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Audio Recorder Shortcut"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"/>
+            android:background="#121212"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clock Styles (Samsung, Oppo, iOS)"
+                android:textColor="#00E676"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose from Samsung Digital/Analog, Oppo O-Clock, or iOS Bold Clock styles."
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"/>
+        </LinearLayout>
 
-        <Switch
-            android:id="@+id/switchRecorder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-    <!-- Music Controls Card -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#121212"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:layout_marginBottom="15dp"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:layout_width="0dp"
+        {/* Clock Position Movement Controls */}
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Music Controls"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"/>
+            android:background="#121212"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clock Position &amp; Drag Control"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enable free movement to place the clock anywhere on the screen."
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"/>
+        </LinearLayout>
 
-        <Switch
-            android:id="@+id/switchMusic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        {/* Full Screen Personal Photo Background */}
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#121212"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Screen Personal Photo"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set your custom photo as full screen background in AOD mode."
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        {/* Compact Torch Toggle */}
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#121212"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Compact Torch Toggle"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+            <Switch
+                android:id="@+id/switchTorch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+        </LinearLayout>
+
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
